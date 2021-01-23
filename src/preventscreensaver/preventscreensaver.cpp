@@ -19,10 +19,10 @@ LRESULT CALLBACK	WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
 VOID CALLBACK TimerProc(HWND hwnd,UINT uMsg,UINT_PTR idEvent,DWORD dwTime);
 
-int APIENTRY _tWinMain(HINSTANCE hInstance,
-                     HINSTANCE hPrevInstance,
-                     LPTSTR    lpCmdLine,
-                     int       nCmdShow)
+int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
+                     _In_opt_ HINSTANCE hPrevInstance,
+                     _In_ LPTSTR    lpCmdLine,
+                     _In_ int       nCmdShow)
 {
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
@@ -65,14 +65,6 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
 //  関数: MyRegisterClass()
 //
 //  目的: ウィンドウ クラスを登録します。
-//
-//  コメント:
-//
-//    この関数および使い方は、'RegisterClassEx' 関数が追加された
-//    Windows 95 より前の Win32 システムと互換させる場合にのみ必要です。
-//    アプリケーションが、関連付けられた
-//    正しい形式の小さいアイコンを取得できるようにするには、
-//    この関数を呼び出してください。
 //
 ATOM MyRegisterClass(HINSTANCE hInstance)
 {
@@ -122,7 +114,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
 
-   nTimer=SetTimer(hWnd,nTimer,1000,TimerProc);
+   nTimer=SetTimer(hWnd,nTimer,30000,TimerProc);
 
    return TRUE;
 }
