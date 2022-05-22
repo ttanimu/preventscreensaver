@@ -1,4 +1,4 @@
 # preventscreensaver
-The Windows native application which prevents screensaver starts. The source code on "src" directory are made by old Visual Studio. The binary on "exe" directory are built by that ols Visual Studio. 
+The Windows native application which prevents screensaver starts. The source code on "src" directory are made by Visual Studio 2022. The binary on "bin" directory are built by that Visual Studio 2022. This repository includes something for old Visual Studio.
 
-Windows XP/../10でスクリーンセーバーの起動を阻害するアプリケーション。"src"ディレクトリにあるソースコードは古いVisual Studio用のもので、当時それで作成したバイナリを"exe"ディレクトリに置いている。
+Windows XP/../10でスクリーンセーバーの起動を阻害するアプリケーション。"src"ディレクトリにあるソースコードはVisual Studio 2022用のもので、それで作成したバイナリを"bin"ディレクトリに置いている。古いVisual Studioでのものはgitで遡れば取得できる。
